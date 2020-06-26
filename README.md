@@ -1,2 +1,2 @@
 # COMPUTER-SCIENCE
-This is about computer science forced while studying or working.
+This is about computer science faced while studying or working.
