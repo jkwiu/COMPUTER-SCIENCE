@@ -153,3 +153,32 @@ This is about computer science faced while studying or working.
     4.  2bit의 overhead가 난다.
     5.  한글자당 8bit인 ASCII코드와
 19. Radix Sort(기수정리)
+20. 브라우저 감지(Detection Web Browser)
+    1.  navigator.userAgent를 이용하는 방법
+        1.  navigator 객체
+            1.  웹 브라우저에 대한 정보를 제공하는 객체
+            2.  기존에는 이 객체를 이용하여 클라이언트의 브라우저를 판별하고 그에 따른 스크립트를 내렸지만, 근래에는 이것만으로 판단하기에 모호해졌다.
+            3.  또한 구글에서는 2020년에 유저들의 보안 개인정보 보호 목적으로 user-agent를 걷어내겠다는 입장을 발표했다.
+21. [gRPC](https://grpc.io/)
+    1.  Google Remote Procedure Call
+    2.  다양한 언어에서 다른 컴퓨터에 있는 함수를 마치 같은 컴퓨터에 있는 것처럼 호출할 수 있는 구조
+    3.  binary data를 주고 받는다.
+        1.  class, function 전송 가능
+    4.  Protocol Buffers
+        1.  데이터를 serializing 하는 방법이다.
+        2.  구글에서 다양한 언어에서 동작할 수 있도록 개발했다.
+    5.  Guide
+        1.  환경설정
+            1.  grpc, protocol buffer set
+        2.  프로토콜 버퍼 정의
+        3.  서버 코드 구현
+        4.  클라이언트 코드 구현
+22. WebSocket
+    1.  서버와 클라이언트간의 효율적인 양방향 통신을 실현하기 위한 기술
+23. XMLHttpRequest(XHR)
+    1.  클라이언트에서 서버 방향으로의 비동기 통신
+    2.  크로스 오리진 통신이 불가능
+24. Server-Sent Events(SSE)
+    1.  서버에서 클라이언트 방향으로 통신(Server Push) <-> Polling
+25. iframe
+    1.  페이지 안에 페이지를 삽입하는 방법
