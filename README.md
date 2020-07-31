@@ -182,3 +182,14 @@ This is about computer science faced while studying or working.
     1.  서버에서 클라이언트 방향으로 통신(Server Push) <-> Polling
 25. iframe
     1.  페이지 안에 페이지를 삽입하는 방법
+26. [web event handling](https://eloquentjavascript.net/15_event.html)
+    1.  Event Handlers
+        1.  Polling
+            1.  하나의 프로그램이 충돌회피 또는 동기화 처리 등을 목적으로 다른 프로그램의 상태를 주기적으로 검사하여 일정한 조건을 만족할 때 송수신 등의 자료처리를 하는 방식
+    2.  Events and DOM Nodes
+        1.  각각의 브라우저 event handler는 context에 등록된다.
+        2.  ``window``객체에 event handler를 등록하는 방법
+        3.  ``button``객체에 event handler를 등록하는 방법 등등
+    3.  Event Objects
+        1.  해당 event에 관한 정보들은 다 event object에 기록되어 있다.
+        2.  event object에서 preventDefault와 같은 메소드를 통해 이미 처리된 이벤트의 전파를 막을 수 있다.
