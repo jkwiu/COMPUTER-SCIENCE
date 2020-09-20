@@ -204,4 +204,5 @@ This is about computer science faced while studying or working.
     1. 함수를 일반 변수와 같이 취급
 45. 가변 함수(variadic function)
     1. 인자의 갯수를 미리 지정하지 않은 함수
-46.
+46. 타입 임베딩(type embedding)
+    1. 구조체(struct)에서 type으로 선언하는 것
