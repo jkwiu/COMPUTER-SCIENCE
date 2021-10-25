@@ -205,4 +205,28 @@ This is about computer science faced while studying or working.
 45. 가변 함수(variadic function)
     1. 인자의 갯수를 미리 지정하지 않은 함수
 46. 타입 임베딩(type embedding)
-    1. 구조체(struct)에서 type으로 선언하는 것
+    1.  구조체(struct)에서 type으로 선언하는 것
+47. SOAP(Simple Object Access Protocol)
+    1.  XML기반의 메시지를 컴퓨터 네트워크상에서 교환하는 프로토콜
+    2.  구성
+        1.  WDSL(Web Services Description Language)
+            1.  웹서비스를 기술한 언어(XML)
+        2.  UDDI(Universal Description Discovery Integration )
+            1.  XML로부터 받아온 데이터를 저장하는 저장소
+    3.  장점
+        1.  기존 원격 기술들에 비해서 프록시와 방화벽에 구애받지 않고 쉽게 통신 가능
+        2.  프로그래밍 언어에 독립적
+    4.  단점
+        1.  느리다.
+    5.  SOA(Service Oriented Architecture)
+        1.  서비스 중심
+48. REST(Restful State Transfer)
+    1.  ROA(Resource Oriented Architecture)
+        1.  자원 중심의 구조
+    2.  구성
+        1.  자원(Resource)
+            1.  모든 자원은 고유한 URI가 존재하고, Server에 저장된다.
+        2.  행위(Verb)
+            1.  GET, POST, PUT, DELETE
+        3.  표현(Representational)
+            1.  Client의 data요청에 Server가 응답한다.(JSON, XML 등)
