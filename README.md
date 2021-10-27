@@ -230,3 +230,31 @@ This is about computer science faced while studying or working.
             1.  GET, POST, PUT, DELETE
         3.  표현(Representational)
             1.  Client의 data요청에 Server가 응답한다.(JSON, XML 등)
+49. 디자인 패턴
+    1.  MVC(Model, View, Controller)
+        1.  구성
+            1.  Model
+                1.  어떤 데이터를 담을 것인가?
+            2.  View
+                1.  어떻게 데이터를 보여줄 것인가?
+            3.  Controller
+                1.  사용자의 요청에 응답하기 위함
+        2.  사용자 인터페이스로부터 비즈니스 로직을 분리하여 애플리케이션을 개발할 수 있다.
+        3.  동작
+            1. 사용자의 Action들은 Controller에 들어오게 됩니다.
+            2. Controller는 사용자의 Action를 확인하고, Model을 업데이트합니다.
+            3. Controller는 Model을 나타내줄 View를 선택합니다.
+            4. View는 Model을 이용하여 화면을 나타냅니다.
+     1. MVP(Model, View, Presenter)
+        1. 구성
+           1. Model
+           2. View
+           3. Presenter
+              1. View에서 요청한 정보로 Model을 가공하여 View에게 전달
+        2. 동작
+           1. 사용자의 Action들은 View를 통해 들어오게 됩니다.
+           2. View는 데이터를 Presenter에 요청합니다.
+           3. Presenter는 Model에게 데이터를 요청합니다.
+           4. Model은 Presenter에서 요청받은 데이터를 응답합니다.
+           5. Presenter는 View에게 데이터를 응답합니다.
+           6. View는 Presenter가 응답한 데이터를 이용하여 화면을 나타냅니다.
