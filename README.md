@@ -261,3 +261,5 @@ This is about computer science faced while studying or working.
            4. Model은 Presenter에서 요청받은 데이터를 응답합니다.
            5. Presenter는 View에게 데이터를 응답합니다.
            6. View는 Presenter가 응답한 데이터를 이용하여 화면을 나타냅니다.
+  50. py set default version
+      1.  power shell 관리자 모드에서 ``$env:PY_PYTHON = 3.7``
