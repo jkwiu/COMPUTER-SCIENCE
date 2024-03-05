@@ -365,3 +365,40 @@ This is about computer science faced while studying or working.
             5.  Postgresql
                 1.  5432
 60. ![Payload](ref/payload.webp)
+61. Socket
+    1.  서로 통신하는 네트워크간의 엔드포인트다.
+62. 네트워크 인터페이스
+    1.  lo(Loopback Interface)
+        1.  시스템 내부에서 통신, 테스트, 네트워크 서비스에 사용되는 가상 네트워크 인터페이스다.
+        2.  ``127.0.0.1``
+    2.  gif(Generic Tunnel Interface)
+        1.  터널링 인터페이스으로 IPv4와 IPv6사이의 통신을 지원
+    3.  stf(Six to Four)
+        1.  IPv6을 IPv4로 혹은 그 반대로 변환하기 위한 인터페이서
+    4.  anpi(Apple Network Performance Interface)
+        1.  애플 기기간의 통신을 위한 네트워크 인터페이스인 듯
+    5.  en(Ethernet Interface)
+        1.  유선 이더넷 연결
+    6.  awdl(Apple Wireless Direct Link)
+        1.  애플 기기간의 Peer to Peer 네트워크 통신을 제공
+    7.  llw(Local Link Interface)
+        1.  로컬 링크 통신에 사용. 같은 장비나 근처 다른 장비와의 통신을 위해 사용
+    8.  utun(Virtual Private Network Tunnel Interface)
+    9.  vmenet(VMware Network Interface)
+    10. bridge
+        1.  여러 네트워크를 결합하여 하나의 네트워크로 .ㅡㅊㄴㄷ만든다.
+63. 윈도우 부팅 관련 이벤트ID
+    1.  41
+        1.  rebooted without shutting down completely
+    2.  6005
+        1.  event log service was started
+    3.  1074
+        1.  an application forces your laptop to shut down or restart.
+    4.  6006
+        1.  shut down correctly
+    5.  6008
+        1.  shut down abnormally or unexpectedly
+    6.  6009
+        1.  마지막으로 종료된 시간이나 시작된 시간
+    7.  1076
+        1.  예기치않게 종료되었을 때
