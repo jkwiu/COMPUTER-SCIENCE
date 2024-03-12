@@ -96,7 +96,7 @@
           6.  기존의 Bearer Token + mTLS/DPOP에서 JWK, 인증서 기반 Client 보안 내장으로 변경
           7.  OpenID신기술 연동성
               1.  블록체인의 탈중앙화된 유저의 did적용 등
-   4.  요약
+   4.  요약`
        1.  Oauth1.0
            1.  인가 프로토콜 개념제시, 브라우저 환경 동작
        2.  OAuth2.0

