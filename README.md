@@ -271,17 +271,113 @@ This is about computer science faced while studying or working.
            4. Model은 Presenter에서 요청받은 데이터를 응답합니다.
            5. Presenter는 View에게 데이터를 응답합니다.
            6. View는 Presenter가 응답한 데이터를 이용하여 화면을 나타냅니다.
-  52. py set default version
-      1.  power shell 관리자 모드에서 ``$env:PY_PYTHON = 3.7``
-  53. WPA(Wi-fi Protected Access)
-  54. 네트워크 통신방식
-      1.  Unicast
-          1.  1:1 통신방식
-          2.  프레임에 목적지의 MAC주소와 출발지의 MAC주소를 담는다
-          3.  로컬 이더넷의 네트워크에서 자신의 MAC주소와 비교한 뒤 같으면 CPU로 올리고 다르면 LAN에서 거른다.
-      2.  Multicast
-          1.  1:Group 통신방식
-      3.  Broadcast
-          1.  1:다 통신방식
-          2.  무조건 프레임을 받아서 CPU로 올린다.
-          3.  보통 상대방의 IP는 알지만 맥주소를 모를 때 맥주소를 알기위해 사용한다.
+52. py set default version
+53. power shell 관리자 모드에서 ``$env:PY_PYTHON = 3.7``
+    1. WPA(Wi-fi Protected Access)
+54. 네트워크 통신방식
+    1.  Unicast
+      1.  1:1 통신방식
+      2.  프레임에 목적지의 MAC주소와 출발지의 MAC주소를 담는다
+      3.  로컬 이더넷의 네트워크에서 자신의 MAC주소와 비교한 뒤 같으면 CPU로 올리고 다르면 LAN에서 거른다.
+    2.  Multicast
+      1.  1:Group 통신방식
+    3.  Broadcast
+      1.  1:다 통신방식
+      2.  무조건 프레임을 받아서 CPU로 올린다.
+      3.  보통 상대방의 IP는 알지만 맥주소를 모를 때 맥주소를 알기위해 사용한다.
+55. py set default version
+    1.  power shell 관리자 모드에서 ``$env:PY_PYTHON = 3.7``
+56. Rest API가 갖고 있는 문제점
+57. Overfetching-problem
+58. Underfetching-problem
+59. Rest API의 문제점을 해결하기 위해 나온 것이 GraphQL
+60. Hash
+61. Modular function
+    1.  One-way function
+        1.  한 번 결과가 나오면 돌아갈 수 없다.
+        2.  예를 들어 ``mod12``를 해서 ``3``이 나오는 경우는 무한히 많다.
+        3.  이를 이용해 암호화를 할 수 있고, ``Hash``함수에 많이 사용된다.
+62. 공개키 암호화
+63. checksum
+64. 블록체인
+65. Rolling hash
+    1.  X<sub>n</sub> = (aX<sub>n-1</sub> + S<sub>i</sub>) mod M
+        1.  S는 문자열이다.
+        2.  a가 아스키 코드라고 한다면 0~255개
+        3.  M이 소수로 잡으면 값의 분포도가 넓게 퍼지기 때문에 좋다.
+        4.  문자열 처리를 위한 방법
+66. 유사난수(pseudo-random number)
+67. 실제로는 난수가 아닌데 알고리즘에 의해 랜덤 난수처럼 보이는 수열
+68. 모듈러 함수의 특징
+69. 주기성
+70. 예를 들어 ``mod3``이면 입력 값이 초과해서 3의 범위 내로 돌아온다.
+71. 순환성
+72. RNG Device(Random Number Generator)
+73. 난수 생성을 위한 방법
+    1.  종류
+        1.  Hardware RNG
+            1.  임베디드 환경이나 보안요구 조건이 높은 곳에서 사용됨.
+            2.  주변의 소음, 노이즈, 잡음 등 랜덤한 물리적 프로세스를 측정하여 랜덤 비트를 생성한다.
+        2.  Software RNG
+            1.  난수 생성 알고리즘에 의해 난수를 생성하며 일정한 규칙이 있다.
+74. LCG(Linear Congruential Generator)
+75. 선형 합동 생성기
+76. 일정한 주기를 갖고 있어 실제 보안이 필요한 곳에서는 사용되지 않는다.
+77. X<sub>n+1</sub> = (aX<sub>n</sub>+c) % m
+78. 이 때 최대 주기는 m이다.
+79. MAC의 UTM을 이용해서 kali, metasploitable2 설치
+80. UTM
+    1.  맥OS와 Apple platform을 위해 개발된 Virtualize solution
+    2.  QEMU 하이퍼바이저로 돌아간다.
+    3.  하이퍼바이저
+        1.  게스트 운영체제와 그 운영체제에서 돌아가는 소프트웨어를 분리시켜 가상화를 해준다.
+81. 포인트는 둘 다 ``bridge``네트워크를 구성하는 것이다.
+82. kali 설치
+    1.  kali image를 받는다.
+    2.  새 가상머신 > Virtualize
+    3.  QEMU
+        1.  UTM
+83. metasploitable2
+    1.  metasploitable2를 받는다.
+    2.  새 가상머신 > Emulate > Other > skip ISO boot 저장
+    3.  설정열고 IDE Drive 삭제하고 드라이브 추가해서 ``metasploitable.vmdk``를 ``import``하고 부팅하면 된다.
+    4.  기본 패스워드는 ``msfadmin/msfadmin``
+84. 다 설치 후 ``ping test``를 하면 잘 통신된다.
+85. ![Payload](ref/payload.webp)
+86. Socket
+87. 서로 통신하는 네트워크간의 엔드포인트다.
+88. 네트워크 인터페이스
+89. lo(Loopback Interface)
+    1.  시스템 내부에서 통신, 테스트, 네트워크 서비스에 사용되는 가상 네트워크 인터페이스다.
+    2.  ``127.0.0.1``
+90. gif(Generic Tunnel Interface)
+    1.  터널링 인터페이스으로 IPv4와 IPv6사이의 통신을 지원
+91. stf(Six to Four)
+    1.  IPv6을 IPv4로 혹은 그 반대로 변환하기 위한 인터페이서
+92. anpi(Apple Network Performance Interface)
+    1.  애플 기기간의 통신을 위한 네트워크 인터페이스인 듯
+93. en(Ethernet Interface)
+    1.  유선 이더넷 연결
+94. awdl(Apple Wireless Direct Link)
+    1.  애플 기기간의 Peer to Peer 네트워크 통신을 제공
+95. llw(Local Link Interface)
+    1.  로컬 링크 통신에 사용. 같은 장비나 근처 다른 장비와의 통신을 위해 사용
+96. utun(Virtual Private Network Tunnel Interface)
+97. vmenet(VMware Network Interface)
+98. bridge
+    1.  여러 네트워크를 결합하여 하나의 네트워크로 .ㅡㅊㄴㄷ만든다.
+99.  윈도우 부팅 관련 이벤트ID
+100. 41
+    1.  rebooted without shutting down completely
+101. 6005
+    1.  event log service was started
+102. 1074
+    1.  an application forces your laptop to shut down or restart.
+103. 6006
+    1.  shut down correctly
+104. 6008
+    1.  shut down abnormally or unexpectedly
+105. 6009
+    1.  마지막으로 종료된 시간이나 시작된 시간
+106. 1076
+    1.  예기치않게 종료되었을 때
