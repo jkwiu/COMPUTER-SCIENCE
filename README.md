@@ -205,11 +205,21 @@ This is about computer science faced while studying or working.
     1. 반환 값을 함수의 헤더에 미리 저장하는 것
 44. 일급함수(first-class)
     1. 함수를 일반 변수와 같이 취급
-45. 가변 함수(variadic function)
+45. 일급 객체(first-class object)
+    1.  다른 객체들에 일반적으로 적용 가능한 연산을 모두 지원하는 객체를 가르킴. 보통 함수에 인자로 넘기기, 수정하기, 변수에 대입하기와 같은 연산을 지원할 때 일급 객체라고 한다.
+    2.  일급 객체의 구성 요소
+        1.  모든 요소는 함수의 실제 매개변수가 될 수 있다.
+        2.  모든 요소는 함수의 반환 값이 될 수 있다.
+        3.  모든 요소는 할당 명령문의 대상이 될 수 있다.
+        4.  모든 요소는 동일 비교의 대상이 될 수 있다.
+46. 클로저
+    1.  일극 객체 함수의 개념을 이용하여 스코프에 묶인 변수를 바인딩하기 위한 일종의 기술. 스코프 내의 영역이 소멸되었어도 그에 대한 접근은 독립된 복사본인 클로저를 통해 이루어질 수 있다.
+    2.  함수 안에 함수를 정의하고 안의 함수를 리턴값으로 주고 이 함수를 변수에 할당하면, 특정 상태의 함수를 바인딩할 수 있다. 또한, inner함수에 다른 값도 할당이 가능해서 유동적으로 사용될 수 있다.
+47. 가변 함수(variadic function)
     1. 인자의 갯수를 미리 지정하지 않은 함수
-46. 타입 임베딩(type embedding)
+48. 타입 임베딩(type embedding)
     1.  구조체(struct)에서 type으로 선언하는 것
-47. SOAP(Simple Object Access Protocol)
+49. SOAP(Simple Object Access Protocol)
     1.  XML기반의 메시지를 컴퓨터 네트워크상에서 교환하는 프로토콜
     2.  구성
         1.  WDSL(Web Services Description Language)
@@ -223,7 +233,7 @@ This is about computer science faced while studying or working.
         1.  느리다.
     5.  SOA(Service Oriented Architecture)
         1.  서비스 중심
-48. REST(Restful State Transfer)
+50. REST(Restful State Transfer)
     1.  ROA(Resource Oriented Architecture)
         1.  자원 중심의 구조
     2.  구성
@@ -233,7 +243,7 @@ This is about computer science faced while studying or working.
             1.  GET, POST, PUT, DELETE
         3.  표현(Representational)
             1.  Client의 data요청에 Server가 응답한다.(JSON, XML 등)
-49. 디자인 패턴
+51. 디자인 패턴
     1.  MVC(Model, View, Controller)
         1.  구성
             1.  Model
@@ -248,7 +258,7 @@ This is about computer science faced while studying or working.
             2. Controller는 사용자의 Action를 확인하고, Model을 업데이트합니다.
             3. Controller는 Model을 나타내줄 View를 선택합니다.
             4. View는 Model을 이용하여 화면을 나타냅니다.
-     1. MVP(Model, View, Presenter)
+     2. MVP(Model, View, Presenter)
         1. 구성
            1. Model
            2. View
@@ -261,5 +271,17 @@ This is about computer science faced while studying or working.
            4. Model은 Presenter에서 요청받은 데이터를 응답합니다.
            5. Presenter는 View에게 데이터를 응답합니다.
            6. View는 Presenter가 응답한 데이터를 이용하여 화면을 나타냅니다.
-  50. py set default version
+  52. py set default version
       1.  power shell 관리자 모드에서 ``$env:PY_PYTHON = 3.7``
+  53. WPA(Wi-fi Protected Access)
+  54. 네트워크 통신방식
+      1.  Unicast
+          1.  1:1 통신방식
+          2.  프레임에 목적지의 MAC주소와 출발지의 MAC주소를 담는다
+          3.  로컬 이더넷의 네트워크에서 자신의 MAC주소와 비교한 뒤 같으면 CPU로 올리고 다르면 LAN에서 거른다.
+      2.  Multicast
+          1.  1:Group 통신방식
+      3.  Broadcast
+          1.  1:다 통신방식
+          2.  무조건 프레임을 받아서 CPU로 올린다.
+          3.  보통 상대방의 IP는 알지만 맥주소를 모를 때 맥주소를 알기위해 사용한다.
