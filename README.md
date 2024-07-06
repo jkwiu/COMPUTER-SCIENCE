@@ -367,17 +367,20 @@ This is about computer science faced while studying or working.
 98. bridge
     1.  여러 네트워크를 결합하여 하나의 네트워크로 .ㅡㅊㄴㄷ만든다.
 99.  윈도우 부팅 관련 이벤트ID
-100. 41
-    1.  rebooted without shutting down completely
-101. 6005
-    1.  event log service was started
-102. 1074
-    1.  an application forces your laptop to shut down or restart.
-103. 6006
-    1.  shut down correctly
-104. 6008
-    1.  shut down abnormally or unexpectedly
-105. 6009
-    1.  마지막으로 종료된 시간이나 시작된 시간
-106. 1076
-    1.  예기치않게 종료되었을 때
+     1.   41
+         1.  rebooted without shutting down completely
+     2.   6005
+         1.  event log service was started
+     3.   1074
+         1.  an application forces your laptop to shut down or restart.
+     4.   6006
+         1.  shut down correctly
+     5.   6008
+         1.  shut down abnormally or unexpectedly
+     6.   6009
+         1.  마지막으로 종료된 시간이나 시작된 시간
+     7.   1076
+         1.  예기치않게 종료되었을 때
+100. python의 ``iterator``와 ``enumerate``는 서로 다르다.
+     1.   iterator(반복자): iterable(반복되는)한 데이터에 순차적으로 접근할 수 있는 방법을 제공하는 객체
+     2.   enumerate: iterable한 객체를 입력받아 index, value를 포함하는 enumerate한 객체를 반환한다.
