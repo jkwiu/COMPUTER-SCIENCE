@@ -57,28 +57,25 @@ This is about computer science faced while studying or working.
        1. Object Oriented Design
        2. Object 중심의 설계(아키텍처)
     2. SOLID(OOD의 5가지 설계 원칙)
-       1. **Single Responsibility Principle**
-          1. 단일책임원칙
-             1. 하나의 객체는 하나의 책임을 가져야 한다.
-             2. Ex)
-                1. 예금잔고 객체
-                   1. 입금, 출금으로 책임을 나눌 것인지
-                   2. 입출금으로 할 것인지
-       2. **Open Closed Principle**
+       1. **Single Responsibility Principle**(단일책임원칙)
+          1. 하나의 객체는 하나의 책임을 가져야 한다.
+          2. Ex)
+             1. 예금잔고 객체
+                1. 입금, 출금으로 책임을 나눌 것인지
+                2. 입출금으로 할 것인지
+       2. **Open Closed Principle**(개방폐쇄의 원칙)
           1. 확장에는 열려있고, 변경에는 닫혀있어야 한다.
           2. 1번과 2번만 잘 지켜도 좋은 프로그래밍이다.
-       3. Liskov Subtitution Principle
-          1. 리스코프 치환 이론
-          2. Base Type의 기존 함수 또는 동작을 바꾸지 말아라.(상속에서 가끔 문제가 생김)
-          3. golang에서는 상속이 없다.
+       3. Liskov Subtitution Principle(리스코프 치환 이론)
+          1. Base Type의 기존 함수 또는 동작을 바꾸지 말아라.(상속에서 가끔 문제가 생김)
+          2. golang에서는 상속이 없다.
              1. 그래서 golang은 oop가 아니다?
                 1. oop에 상속이 있어야 한다는 내용은 없다.
-       4. Interface Segregation Principle
-          1. 인터페이스 분리 원칙
-          2. 여러개의 관계를 모아놓은 인터페이스보다 관계 하나씩 정의하는 것이 더 좋다.
+       4. Interface Segregation Principle(인터페이스 분리 원칙)
+          1. 여러개의 관계를 모아놓은 인터페이스보다 관계 하나씩 정의하는 것이 더 좋다.
              1. Ex) 게임
                 1. 케릭터의 동작을 모은 것보다 각각 분리해놓은 것이 낫다.(의존성이 낮아짐)
-       5. Dependency Inversion Priciple
+       5. Dependency Inversion Priciple(의존성역전의 원칙)
           1. 관계는 인터페이스에 의존하는 것이 객체에 의존하는 것보다 좋다.
     3. 의존성을 낮추고 응집성을 높이기 위함
 21. Beyond OOP
@@ -365,19 +362,20 @@ This is about computer science faced while studying or working.
 96. utun(Virtual Private Network Tunnel Interface)
 97. vmenet(VMware Network Interface)
 98. bridge
-    1.  여러 네트워크를 결합하여 하나의 네트워크로 .ㅡㅊㄴㄷ만든다.
+    1.  여러 네트워크를 결합하여 하나의 네트워크로 만든다.
 99.  윈도우 부팅 관련 이벤트ID
-100. 41
-    1.  rebooted without shutting down completely
-101. 6005
-    1.  event log service was started
-102. 1074
-    1.  an application forces your laptop to shut down or restart.
-103. 6006
-    1.  shut down correctly
-104. 6008
-    1.  shut down abnormally or unexpectedly
-105. 6009
-    1.  마지막으로 종료된 시간이나 시작된 시간
-106. 1076
-    1.  예기치않게 종료되었을 때
+     1.   41
+         1.  rebooted without shutting down completely
+     2.   6005
+         1.  event log service was started
+     3.   1074
+         1.  an application forces your laptop to shut down or restart.
+     4.   6006
+         1.  shut down correctly
+     5.   6008
+         1.  shut down abnormally or unexpectedly
+     6.   6009
+         1.  마지막으로 종료된 시간이나 시작된 시간
+     7.   1076
+         1.  예기치않게 종료되었을 때
+100. 
