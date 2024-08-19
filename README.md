@@ -378,4 +378,6 @@ This is about computer science faced while studying or working.
          1.  마지막으로 종료된 시간이나 시작된 시간
      7.   1076
          1.  예기치않게 종료되었을 때
-100. 
+100. python의 ``iterator``와 ``enumerate``는 서로 다르다.
+     1.   iterator(반복자): iterable(반복되는)한 데이터에 순차적으로 접근할 수 있는 방법을 제공하는 객체
+     2.   enumerate: iterable한 객체를 입력받아 index, value를 포함하는 enumerate한 객체를 반환한다.
